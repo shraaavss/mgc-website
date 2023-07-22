@@ -33,7 +33,7 @@ export default function Nav() {
         <nav className="nav-bar">
 
             <div>
-                <img className="logo h-32" src={mgclogo} alt="Class Logo" />
+                <img className="logo" src={mgclogo} alt="Class Logo" />
             </div>
 
 
