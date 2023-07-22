@@ -20,7 +20,7 @@ export default function Nav() {
         },
         hidden: {
             opacity: 0,
-        }
+        },
     }
 
     const itemMotion = {
@@ -67,8 +67,8 @@ export default function Nav() {
             {toggled && !matches && (
                 <motion.div
                     variants={navMotion}
-                    animate="visible"
                     initial="hidden"
+                    animate="visible"
                     className="fixed flex bg-white bottom-0 left-0 w-full h-screen justify-center items-center">
 
                     <motion.div
