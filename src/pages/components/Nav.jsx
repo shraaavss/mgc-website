@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import mgclogo from './images/mgclogo.png';
 import { motion } from 'framer-motion';
 import { useState } from "react";
@@ -35,11 +35,11 @@ export default function Nav() {
                 <img className="logo" src={mgclogo} alt="Class Logo" />
             </div>
 
-            <h1 className="text-lg font-semibold">Mihir Guitar Classes</h1>
+            <h1 className="nav-heading text-white">Mihir Guitar Classes</h1>
 
             {/* Checks if we're on mobile or not */}
             {matches && (
-                <div className="flex gap-6">
+                <div className="nav-links flex gap-6 text-white">
                     <a href="/">Gallery</a>
                     <a href="/About">About Us</a>
                     <a href="/Contact">Contact</a>
