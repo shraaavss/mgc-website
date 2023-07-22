@@ -1,0 +1,106 @@
+---
+import mainImg from "./images/guitars-2.jpg";
+---
+
+<div class="relative mx-12 flex flex-col items-center justify-center">
+  <h1 class="text-xl">Welcome to MGC!</h1>
+
+  <div class="relative">
+    <div class="relative">
+      <svg class="absolute h-full w-full overflow-visible">
+        <defs>
+          <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style={{ stopColor: "#27374D", stopOpacity: 1 }}
+            ></stop>
+            <stop offset="100%" style={{ stopColor: "#9DB2BF", stopOpacity: 1 }}
+            ></stop>
+          </linearGradient>
+        </defs>
+        <path
+          id="border-path"
+          fill="none"
+          stroke="url(#gradient)"
+          stroke-width="4"></path>
+      </svg>
+
+      <p id="anim-p" class="p-6 text-lg">
+        Having started in 2011, we have years of experience in the art we teach.
+        Lots of students have successfully fulfilled their desires of becoming
+        an artist by joining MGC. Moreover, <span class="font-bold"
+          >we provide instruments in the class to all students
+        </span>
+        clearing out a hurdle in your journey towards achieving your goals. <br
+        /><br />
+
+        Just music alone, whether playing or listening, is enough to relieve
+        your mind and give you inner peace.
+        <span class="font-bold"
+          >Adequate skills and confidence to play the instrument you want</span
+        > are the icing on the cake that you will master here! We have an energetic
+        ambiance and eager-to-learn people joining us every day, so what are you
+        waiting for?
+      </p>
+    </div>
+
+    <div class="flex justify-center pt-12 text-center items-center mb-8">
+      <div class="w-32">
+        <h2>Students Taught</h2>
+        <p class="text-xl font-bold">800</p>
+      </div>
+
+      <div class="w-32">
+        <h2>Years Spent</h2>
+        <p class="text-xl font-bold">9.33K</p>
+      </div>
+
+      <div class="w-32">
+        <h2>YouTube</h2>
+        <p class="text-xl font-bold">9.33K</p>
+      </div>
+    </div>
+
+    <div class="relative">
+      <img class="h-full rounded-2xl" src={mainImg} alt="guitars" />
+    </div>
+  </div>
+
+  <div class="mt-12 h-4 w-full bg-black"></div>
+
+</div>
+
+<style>
+    #border-path {
+        animation: draw 1s forwards 1s ease-out;
+    }
+
+    @keyframes draw {
+        to {
+            stroke-dashoffset: 0;
+        }
+    }
+</style>
+
+
+<script>
+    function updatePath() {
+      const textMain = document.querySelector("#anim-p") as HTMLElement;
+      const path = document.querySelector("#border-path") as SVGPathElement;
+
+      if (textMain && path) {
+        path.setAttribute(
+          "d",
+          `M0,0 V${textMain.offsetHeight} H${textMain.offsetWidth} v${
+            textMain.offsetWidth / 3
+          }`
+        );
+      }
+      const pathLength = path.getTotalLength();
+      path.style.strokeDasharray = pathLength.toString();
+      path.style.strokeDashoffset = pathLength.toString();
+    }
+
+
+    window.addEventListener("DOMContentLoaded", updatePath);
+    window.addEventListener("resize", updatePath);
+  </script>
+
