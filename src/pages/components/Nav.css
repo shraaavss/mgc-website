@@ -8,15 +8,14 @@
     align-items: center;
     padding-block: 12px;
     padding-inline: 5px;
-    background-color: rgb(28, 10, 0);
+    background-color: #4a4a4a;
 }
 
 .nav-heading{
     font-size: 40px;
     font-family: "Yeseva One", cursive;
-
 }
 
-.logo{
+/* .logo{
     height: 120px;
-}
+} */

@@ -31,11 +31,13 @@ export default function Nav() {
 
     return (
         <nav className="nav-bar">
+
             <div>
-                <img className="logo" src={mgclogo} alt="Class Logo" />
+                <img className="logo h-32" src={mgclogo} alt="Class Logo" />
             </div>
 
-            <h1 className="nav-heading text-white">Mihir Guitar Classes</h1>
+
+            <h1 className="nav-heading text-white text-center">Mihir Guitar Classes</h1>
 
             {/* Checks if we're on mobile or not */}
             {matches && (
@@ -52,15 +54,15 @@ export default function Nav() {
                     className="space-y-1.5 cursor-pointer z-50">
                     <motion.span
                         animate={{ rotateZ: toggled ? 45 : 0, y: toggled ? 8 : 0, width: toggled ? 32 : 24 }}
-                        className="block h-0.5 w-6 bg-black"> </motion.span>
+                        className="block h-0.5 w-6 bg-white"> </motion.span>
 
                     <motion.span
                         animate={{ width: toggled ? 0 : 24 }}
-                        className="block h-0.5 w-6 bg-black"> </motion.span>
+                        className="block h-0.5 w-6 bg-white"> </motion.span>
 
                     <motion.span
                         animate={{ rotateZ: toggled ? -45 : 0, y: toggled ? -8 : 0, width: toggled ? 32 : 24 }}
-                        className="block h-0.5 w-6 bg-black"> </motion.span>
+                        className="block h-0.5 w-6 bg-white"> </motion.span>
                 </div>
             )}
 
