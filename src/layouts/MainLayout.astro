@@ -1,5 +1,4 @@
 ---
-
 import Nav from '../pages/components/Nav';
 ---
 
@@ -21,9 +20,10 @@ import Nav from '../pages/components/Nav';
   
   <body> 
     <main>
-      <Nav />
+      <Nav client:visible />
         <slot />
         <!-- All the main content to be rendered-->
     </main>
   </body>
 </html>
+

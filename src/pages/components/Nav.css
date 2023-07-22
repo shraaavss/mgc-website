@@ -1,0 +1,18 @@
+.nav-bar{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-block: 20px;
+    margin-inline: 20px;
+}
+
+.line{
+    position: absolute;
+    margin-bottom: 0;
+    margin-top: 150px;
+}
+
+.logo{
+    height: 120px;
+}
