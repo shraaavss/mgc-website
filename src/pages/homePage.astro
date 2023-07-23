@@ -9,13 +9,17 @@ import Nav from "./components/Nav.jsx";
   <div id="intro" class="flex flex-col items-center justify-center">
     <div class="dark-overlay">
       <img class="logo" src={mgclogo} alt="" />
-      <h1 class="text-white">Mihir Guitar Classes</h1>
+      <h1 class="tagline">Mihir Guitar Classes</h1>
     </div>
   </div>
 </div>
 
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
+
+  body{
+    overflow: hidden;
+  }
 
   .main-wrap {
     background-image: url("./components/images/guitars.png");
@@ -25,11 +29,12 @@ import Nav from "./components/Nav.jsx";
     position: relative;
   }
 
-  h1 {
+  .tagline {
     font-family: "Yeseva One", cursive;
     font-size: 100px;
     text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
     text-align: center;
+    color: aliceblue;
   }
 
   .logo {
