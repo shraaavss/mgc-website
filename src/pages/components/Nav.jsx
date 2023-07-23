@@ -32,17 +32,17 @@ export default function Nav() {
     return (
         <nav className="nav-bar">
 
-            <div>
+            {/* <div className='flex flex-row items-center justify-center gap-2'>
                 <a href="/"><img className="logo" src={mgclogo} alt="Class Logo" /></a>
+                <h1 className="nav-heading text-white text-center">Mihir Guitar Classes</h1>
+            </div> */}
 
-            </div>
 
 
-            <h1 className="nav-heading text-white text-center">Mihir Guitar Classes</h1>
 
             {/* Checks if we're on mobile or not */}
             {matches && (
-                <div className="nav-links flex gap-6 text-white">
+                <div className="nav-links flex gap-10 text-white">
                     <a className='nav-link-text' href="/">Gallery</a>
                     <a className='nav-link-text' href="/About">About Us</a>
                     <a className='nav-link-text' href="/Contact">Contact</a>
@@ -50,6 +50,7 @@ export default function Nav() {
             )}
 
 
+            {/* TOGGLE ICON */}
             {!matches && (
                 <div onClick={() => setToggled(prevToggled => !prevToggled)}
                     className="space-y-1.5 cursor-pointer z-50">

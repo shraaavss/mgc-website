@@ -11,28 +11,18 @@
 .nav-bar{
     position: relative;
     display: flex;
-    justify-content: space-evenly;
+    /* justify-content: space-around; */
+    justify-content: end;
+    margin-right: 40px;
     align-items: center;
     padding-block: 12px;
     padding-inline: 5px;
-    background-color: #4a4a4a;
     z-index: 1;
 }
 
 .nav-heading{
-    font-size: 35px;
+    font-size: 50px;
     font-family: "Yeseva One", cursive;
-}
-
-.logo{
-    height: 120px;
-    cursor: pointer;
-}
-
-@media screen and (max-width: 767px)  {
-    .logo {
-        height: 90px;
-    }
 }
 
 .nav-links-toggle {
@@ -45,8 +35,9 @@
 
 .nav-links {
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 20px;
+    font-size: 22px;
     color: aliceblue;
+    margin-top: 30px;
 }
 
 .nav-link-text{
