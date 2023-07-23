@@ -5,11 +5,11 @@ import mainImg from "./images/guitars-2.jpg";
 <div
   class="relative mx-12 flex flex-col items-center justify-center xl:flex-row xl:gap-36"
 >
-  <span>
+  <div class="w-full xl:w-1/2">
     <h1 class="text-xl">Welcome to MGC!</h1>
     <div class="relative">
       <div class="relative">
-        <svg class="absolute h-full w-full overflow-visible">
+        <svg class="absolute h-full w-full overflow-hidden">
           <defs>
             <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
               <stop offset="0%" style={{ stopColor: "#27374D", stopOpacity: 1 }}
@@ -62,14 +62,14 @@ import mainImg from "./images/guitars-2.jpg";
         </div>
       </div>
     </div>
-  </span>
+  </div>
 
   <div class="relative">
-    <img class="h-full rounded-2xl" src={mainImg} alt="guitars" />
+    <img class="main-img" src={mainImg} alt="guitars" />
   </div>
 </div>
 
-<div class="mt-12 h-4 w-full bg-black"></div>
+<div class="mt-10 h-4 w-full bg-black"></div>
 
 <style>
   #border-path {
@@ -92,7 +92,7 @@ import mainImg from "./images/guitars-2.jpg";
       path.setAttribute(
         "d",
         `M0,0 V${textMain.offsetHeight} H${textMain.offsetWidth} v${
-          textMain.offsetWidth / 3
+          textMain.offsetWidth / 2
         }`
       );
     }
@@ -127,3 +127,16 @@ import mainImg from "./images/guitars-2.jpg";
   window.addEventListener("DOMContentLoaded", updatePath);
   window.addEventListener("resize", updatePath);
 </script>
+
+<style>
+  .main-img {
+    height: 500px;
+    border-radius: 15px;
+    margin-top: 50px;
+    transition: 0.2s all ease-out;
+  }
+
+  .main-img:hover {
+    box-shadow: 4px 4px 4px rgba(74, 74, 74, 1);
+  }
+</style>
