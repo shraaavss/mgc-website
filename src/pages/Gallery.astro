@@ -3,46 +3,83 @@ import img1 from "./components/images/img1.jpg";
 import img2 from "./components/images/img2.jpg";
 import img3 from "./components/images/img3.png";
 import img4 from "./components/images/img4.png";
+import img5 from "./components/images/img5.jpg";
 import Nav from "./components/Nav";
 ---
-{(<Nav client:visible position={false} />)}
 
-<div class="wrapper">
+<div>
+  {(<Nav client:visible position={false} />)}
 
-  <h1>Our Gallery</h1>
-  <div class="images">
-    <img class="img" src={img1} alt="" />
-    <img class="img" src={img2} alt="" />
-    <img class="img" src={img3} alt="" />
-    <img class="img" src={img4} alt="" />
-  </div>
+  <span class="flex flex-col justify-center items-center mt-10 mb-10">
+    <h1 class="heading">Our Gallery</h1>
+  
+    <div class="container">
+      <div class="box"><img src={img1} alt="" /></div>
+      <div class="box"><img src={img3} alt="" /></div>
+      <div class="box"><img src={img5} alt="" /></div>
+      <div class="box"><img src={img2} alt="" /></div>
+      <div class="box"><img src={img4} alt="" /></div>
+    </div>
+  </span>
+
 </div>
 
 <style>
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    padding: 30px;
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+/* font-family: 'Josefin Sans', sans-serif; */
+  body {
+   background-color: rgba(74, 74, 74, 1);
   }
 
-  .images {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+  .heading{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 60px;
+    color: aliceblue;
+  }
+  .container {
+    width: 1400px;
+    margin: 20px auto;
+    columns: 4;
+    column-gap: 20px;
+    padding-inline: 20px;
   }
 
-  .img {
-    height: 200px;
-    border-radius: 12px;
-    transition: 0.2s all ease-out;
+  .container .box {
+    width: 100%;
+    margin-bottom: 10px;
+    break-inside: avoid;
   }
 
-  img:hover {
-    box-shadow: 4px 4px 4px rgba(74, 74, 74, 1);
+  .container .box img {
+    max-width: 100%;
+    border-radius: 15px;
+  }
+
+  img{
+    transition: box-shadow 0.3s ease;
+  }
+  img:hover{
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+
+  @media (max-width: 1200px;) {
+    .container {
+      width: calc(100% - 40%);
+      columns: 3;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      columns: 2;
+    }
+
+    @media (max-width: 480 px) {
+      .container {
+        columns: 1;
+      }
+    }
   }
 </style>
