@@ -33,7 +33,8 @@ export default function Nav() {
         <nav className="nav-bar">
 
             <div>
-                <img className="logo" src={mgclogo} alt="Class Logo" />
+                <a href="/"><img className="logo" src={mgclogo} alt="Class Logo" /></a>
+
             </div>
 
 
@@ -42,9 +43,9 @@ export default function Nav() {
             {/* Checks if we're on mobile or not */}
             {matches && (
                 <div className="nav-links flex gap-6 text-white">
-                    <a href="/">Gallery</a>
-                    <a href="/About">About Us</a>
-                    <a href="/Contact">Contact</a>
+                    <a className='nav-link-text' href="/">Gallery</a>
+                    <a className='nav-link-text' href="/About">About Us</a>
+                    <a className='nav-link-text' href="/Contact">Contact</a>
                 </div>
             )}
 
@@ -71,10 +72,10 @@ export default function Nav() {
                     variants={navMotion}
                     initial="hidden"
                     animate="visible"
-                    className="fixed flex bg-white bottom-0 left-0 w-full h-screen justify-center items-center">
+                    className="fixed flex bg-neutral-500 bottom-0 left-0 w-full h-screen justify-center items-center">
 
                     <motion.div
-                        className="flex flex-col gap-24 text-lg items-center justify-center">
+                        className="nav-links-toggle flex flex-col gap-20 text-lg items-center justify-center">
                         <motion.a variants={itemMotion} href="/About">About Us</motion.a>
                         <motion.a variants={itemMotion} href="/">Gallery</motion.a>
                         <motion.a variants={itemMotion} href="/Contact">Contact</motion.a>
