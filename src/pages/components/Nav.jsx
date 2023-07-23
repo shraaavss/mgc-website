@@ -77,10 +77,10 @@ export default function Nav({ position = true }) {
                                     className="fixed flex bg-neutral-500 bottom-0 left-0 w-full h-screen justify-center items-center">
 
                                     <motion.div
-                                        className="nav-links-toggle flex flex-col gap-20 text-lg items-center justify-center">
+                                        className="nav-links-toggle flex flex-col gap-20 items-center justify-center">
+                                        <motion.a variants={itemMotion} href="/Contact">Contact</motion.a>
                                         <motion.a variants={itemMotion} href="./About.astro">About Us</motion.a>
                                         <motion.a variants={itemMotion} href="/Gallery">Gallery</motion.a>
-                                        <motion.a variants={itemMotion} href="/Contact">Contact</motion.a>
                                     </motion.div>
                                 </motion.div>
 
@@ -139,7 +139,7 @@ export default function Nav({ position = true }) {
                                     className="fixed flex bg-neutral-500 bottom-0 left-0 w-full h-screen justify-center items-center">
 
                                     <motion.div
-                                        className="nav-links-toggle flex flex-col gap-20 text-lg items-center justify-center">
+                                        className="nav-links-toggle flex flex-col gap-20 items-center justify-center">
                                         <motion.a variants={itemMotion} href="./About.astro">About Us</motion.a>
                                         <motion.a variants={itemMotion} href="/">Gallery</motion.a>
                                         <motion.a variants={itemMotion} href="/Contact">Contact</motion.a>
