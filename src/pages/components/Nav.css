@@ -11,7 +11,16 @@
 .nav-bar{
     position: relative;
     display: flex;
-    /* justify-content: space-around; */
+    justify-content: space-around;
+    align-items: center;
+    padding-block: 12px;
+    padding-inline: 5px;
+    z-index: 1;
+}
+
+.nav-bar-home{
+    position: relative;
+    display: flex;
     justify-content: end;
     margin-right: 40px;
     align-items: center;
@@ -47,4 +56,21 @@
 .nav-link-text:hover{
     text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.5);
     font-weight: bolder;
+}
+
+.nav-heading{
+    font-size: 35px;
+    font-size: 50px;
+    font-family: "Yeseva One", cursive;
+}
+
+.logo{
+    height: 120px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 767px)  {
+    .logo {
+        height: 90px;
+    }
 }

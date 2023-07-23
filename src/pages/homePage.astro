@@ -4,7 +4,7 @@ import Nav from "./components/Nav.jsx";
 ---
 
 <div class="main-wrap">
-  {(<Nav client:visible />)}
+  {(<Nav client:visible position={true} />)}
 
   <div id="intro" class="flex flex-col items-center justify-center">
     <div class="dark-overlay">
@@ -56,21 +56,17 @@ import Nav from "./components/Nav.jsx";
   /* MEDIA QUERIES */
 
   @media screen and (max-width: 767px) {
-
     .dark-overlay {
-        display: flex;
-        flex-direction: column;
+      display: flex;
+      flex-direction: column;
     }
 
-
     h1 {
-        font-size: 50px;
+      font-size: 50px;
     }
 
     .logo {
-        height: 100px;
+      height: 100px;
     }
   }
-
-
 </style>

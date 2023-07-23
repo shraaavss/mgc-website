@@ -3,9 +3,12 @@ import img1 from "./components/images/img1.jpg";
 import img2 from "./components/images/img2.jpg";
 import img3 from "./components/images/img3.png";
 import img4 from "./components/images/img4.png";
+import Nav from "./components/Nav";
 ---
+{(<Nav client:visible position={false} />)}
 
 <div class="wrapper">
+
   <h1>Our Gallery</h1>
   <div class="images">
     <img class="img" src={img1} alt="" />
