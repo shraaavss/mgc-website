@@ -1,5 +1,5 @@
 ---
-import Nav from '../pages/components/Nav';
+import Nav from "../pages/components/Nav";
 ---
 
 <!DOCTYPE html>
@@ -9,21 +9,16 @@ import Nav from '../pages/components/Nav';
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="An astro website"
-    />
+    <meta name="description" content="An astro website" />
 
     <title>Astro Project</title>
-
   </head>
-  
-  <body> 
+
+  <body>
     <main>
       <Nav client:visible />
-        <slot />
-        <!-- All the main content to be rendered-->
+      <slot />
+      <!-- All the main content to be rendered-->
     </main>
   </body>
 </html>
-
