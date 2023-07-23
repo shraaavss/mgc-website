@@ -1,7 +1,7 @@
 import mgclogo from './images/mgclogo.png';
 import { motion } from 'framer-motion';
 import { useState } from "react";
-import './Nav.css'
+import './Nav.css';
 import { useMediaQuery } from "../../util/usemediaQuery";
 
 export default function Nav({ position = true }) {
@@ -40,7 +40,7 @@ export default function Nav({ position = true }) {
 
                         {/* Checks if we're on mobile or not */}
                         {matches && (
-                            <div className="nav-links flex gap-10 text-white">
+                            <div className="nav-links-home flex gap-10 text-white">
                                 <a className='nav-link-text' href="/Gallery">Gallery</a>
                                 <a className='nav-link-text' href="/About">About Us</a>
                                 <a className='nav-link-text' href="/Contact">Contact</a>
@@ -79,7 +79,7 @@ export default function Nav({ position = true }) {
                                     <motion.div
                                         className="nav-links-toggle flex flex-col gap-20 text-lg items-center justify-center">
                                         <motion.a variants={itemMotion} href="./About.astro">About Us</motion.a>
-                                        <motion.a variants={itemMotion} href="/">Gallery</motion.a>
+                                        <motion.a variants={itemMotion} href="/Gallery">Gallery</motion.a>
                                         <motion.a variants={itemMotion} href="/Contact">Contact</motion.a>
                                     </motion.div>
                                 </motion.div>
@@ -91,12 +91,12 @@ export default function Nav({ position = true }) {
 
                     :
 
-                    (<nav className="nav-bar bg-neutral-500" >
+                    (<nav className="nav-bar" >
 
                         <div>
                             <div className='flex flex-row items-center justify-center gap-2'>
                                 <a href="/"><img className="logo" src={mgclogo} alt="Class Logo" /></a>
-                                <h1 className="nav-heading text-white text-center">Mihir Guitar Classes</h1>
+                                <h1 className="nav-heading">Mihir Guitar Classes</h1>
                             </div>
                         </div>
 
