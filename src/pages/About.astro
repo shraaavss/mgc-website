@@ -1,87 +1,96 @@
 ---
 import mainImg from "./components/images/guitars-2.jpg";
 import Nav from "./components/Nav";
+import MainLayout from "../layouts/MainLayout.astro";
 ---
+<MainLayout>
 
-<div>
-  {(<Nav client:visible position={false} />)}
-
-  <div
-    class="relative mx-12 flex flex-col items-center justify-center xl:flex-row xl:gap-36 xl:overflow-hidden"
-  >
-    <div class="w-full xl:w-1/2">
-
-        <h1 class="welcome">Welcome to MGC!</h1>
-
-      <div class="relative">
+  <div>
+    {(<Nav client:visible position={false} />)}
+  
+    <div
+      class="relative mx-12 flex flex-col items-center justify-center xl:flex-row xl:gap-36 xl:overflow-hidden"
+    >
+      <div class="w-full xl:w-1/2">
+  
+          <h1 class="welcome">Welcome to MGC!</h1>
+  
         <div class="relative">
-          <svg class="absolute h-full w-full overflow-visible mt-4">
-            <defs>
-              <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop
-                  offset="0%"
-                  style={{ stopColor: "#f0f0f0", stopOpacity: 1 }}></stop>
-                <stop
-                  offset="100%"
-                  style={{ stopColor: "#4A4A4AFF", stopOpacity: 1 }}></stop>
-              </linearGradient>
-            </defs>
-            <path
-              id="border-path"
-              fill="none"
-              stroke="url(#gradient)"
-              stroke-width="4"></path>
-          </svg>
-
-          <p id="anim-p" class="p-6 text-lg text-slate-50">
-            Having started in 2011, we have years of experience in the art we
-            teach. Lots of students have successfully fulfilled their desires of
-            becoming an artist by joining MGC. Moreover, <span class="font-bold"
-              >we provide instruments in the class to all students
-            </span>
-            clearing out a hurdle in your journey towards achieving your goals. <br
-            /><br />
-
-            Just music alone, whether playing or listening, is enough to relieve
-            your mind and give you inner peace.
-            <span class="font-bold"
-              >Adequate skills and confidence to play the instrument you want</span
-            > are the icing on the cake that you will master here! We have an energetic
-            ambiance and eager-to-learn people joining us every day, so what are
-            you waiting for? 
-          </p>
-        </div>
-
-
-        <div
-          class="flex justify-center pt-12 text-center items-center mb-4 gap-6"
-        >
-          <div class="w-32">
-            <h2 class="text-lg">Students Taught</h2>
-            <p id="students" class="text-4xl font-bold">500</p>
+          <div class="relative">
+            <svg class="absolute h-full w-full overflow-visible mt-4">
+              <defs>
+                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop
+                    offset="0%"
+                    style={{ stopColor: "#f0f0f0", stopOpacity: 1 }}></stop>
+                  <stop
+                    offset="100%"
+                    style={{ stopColor: "#4A4A4AFF", stopOpacity: 1 }}></stop>
+                </linearGradient>
+              </defs>
+              <path
+                id="border-path"
+                fill="none"
+                stroke="url(#gradient)"
+                stroke-width="4"></path>
+            </svg>
+  
+            <p id="anim-p" class="p-6 text-lg text-slate-50">
+              Having started in 2011, we have years of experience in the art we
+              teach. Lots of students have successfully fulfilled their desires of
+              becoming an artist by joining MGC. Moreover, <span class="font-bold"
+                >we provide instruments in the class to all students
+              </span>
+              clearing out a hurdle in your journey towards achieving your goals. <br
+              /><br />
+  
+              Just music alone, whether playing or listening, is enough to relieve
+              your mind and give you inner peace.
+              <span class="font-bold"
+                >Adequate skills and confidence to play the instrument you want</span
+              > are the icing on the cake that you will master here! We have an energetic
+              ambiance and eager-to-learn people joining us every day, so what are
+              you waiting for? 
+            </p>
           </div>
-
-          <div class="w-32">
-            <h2 class="text-lg">Years Spent</h2>
-            <p id="years" class="text-4xl font-bold">12</p>
+  
+          <div class="all-btns flex flex-row items-center justify-center gap-5 pt-10">
+            <a href="/"><button class="CTA">Guitar</button></a>
+            <a href="/"><button class="CTA">Piano</button></a>
+            <a href="/"><button class="CTA">Ukulele</button></a>
           </div>
-
-          <div class="w-32">
-            <h2 class="text-lg">YouTube</h2>
-            <p id="youtube" class="text-4xl font-bold">9K+</p>
-          </div>
-
-          <a href="/Contact"><button class="CTA">Contact Now!</button></a>
-          
+  
+  
+  
+  
+          <!-- <div
+            class="flex justify-center pt-12 text-center items-center mb-4 gap-6"
+          >
+            <div class="w-32">
+              <h2 class="text-lg">Students Taught</h2>
+              <p id="students" class="text-4xl font-bold">500</p>
+            </div>
+  
+            <div class="w-32">
+              <h2 class="text-lg">Years Spent</h2>
+              <p id="years" class="text-4xl font-bold">12</p>
+            </div>
+  
+            <div class="w-32">
+              <h2 class="text-lg">YouTube</h2>
+              <p id="youtube" class="text-4xl font-bold">9K+</p>
+            </div>
+            
+          </div> -->
         </div>
       </div>
-    </div>
-
-    <div class="relative">
-      <img class="main-img" src={mainImg} alt="guitars" />
+  
+      <div class="relative">
+        <img class="main-img" src={mainImg} alt="guitars" />
+      </div>
     </div>
   </div>
-</div>
+</MainLayout>
 
 <!-- STYLING STARTS HERE -->
 
@@ -159,6 +168,8 @@ import Nav from "./components/Nav";
       rgba(139, 137, 137, 1) 77%,
       rgba(212, 208, 208, 1) 96%
     );
+   background-repeat: no-repeat;
+
   }
 
   .welcome {

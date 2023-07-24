@@ -8,29 +8,26 @@ import Nav from "./components/Nav.jsx";
 
   <div id="intro" class="flex flex-col items-center justify-center">
     <div class="dark-overlay">
-      <div class="flex flex-row items-center justify-center">
+      <div class="hero flex items-center justify-center">
         <img class="logo" src={mgclogo} alt="" />
         <h1 class="tagline">Mihir Guitar Classes</h1>
       </div>
 
-      <div class="flex flex-row items-center justify-center gap-10">
-        <a href="/About"><button class="CTA">Know More</button></a>
-        
-      </div>
+      <a href="/About"><button class="CTA">Know More</button></a>
     </div>
   </div>
 </div>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
-/* font-family: 'Yeseva One', cursive; */
+  @import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
+  /* font-family: 'Yeseva One', cursive; */
 
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
-/* font-family: 'Josefin Sans', sans-serif; */
+  @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+  /* font-family: 'Josefin Sans', sans-serif; */
 
-  body {
+  /* body {
     overflow: hidden;
-  }
+  } */
 
   .main-wrap {
     background-image: url("./components/images/guitars.png");
@@ -70,7 +67,7 @@ import Nav from "./components/Nav.jsx";
     flex-direction: column;
   }
 
-  .CTA{
+  .CTA {
     padding-inline: 16px;
     padding-block: 10px;
     background-color: rgba(35, 35, 35, 1);
@@ -83,24 +80,30 @@ import Nav from "./components/Nav.jsx";
     transition: all 0.3s ease;
   }
 
-  .CTA:hover{
+  .CTA:hover {
     box-shadow: 3px 3px 2px rgba(82, 82, 82, 1);
   }
 
   /* MEDIA QUERIES */
 
   @media screen and (max-width: 767px) {
-    .dark-overlay {
+    .hero {
       display: flex;
       flex-direction: column;
     }
 
-    h1 {
+    .tagline {
       font-size: 50px;
     }
 
     .logo {
       height: 100px;
+    }
+
+    .CTA {
+      font-size: 20px;
+      padding-inline: 10px;
+      padding-block: 8px;
     }
   }
 </style>

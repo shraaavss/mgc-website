@@ -5,39 +5,43 @@ import img3 from "./components/images/img3.png";
 import img4 from "./components/images/img4.png";
 import img5 from "./components/images/img5.jpg";
 import Nav from "./components/Nav";
+import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<div>
-  {(<Nav client:visible position={false} />)}
+<MainLayout>
+  <div>
+    {(<Nav client:visible position={false} />)}
 
-  <span class="flex flex-col justify-center items-center mt-10 mb-10">
-    <h1 class="heading">Our Gallery</h1>
-  
-    <div class="container">
-      <div class="box"><img src={img1} alt="" /></div>
-      <div class="box"><img src={img3} alt="" /></div>
-      <div class="box"><img src={img5} alt="" /></div>
-      <div class="box"><img src={img2} alt="" /></div>
-      <div class="box"><img src={img4} alt="" /></div>
-    </div>
-  </span>
+    <span class="flex flex-col justify-center items-center mt-10 mb-10">
+      <h1 class="heading">Our Gallery</h1>
 
-</div>
+      <div class="container">
+        <div class="box"><img class="image" src={img1} alt="" /></div>
+        <div class="box"><img class="image" src={img3} alt="" /></div>
+        <div class="box"><img class="image" src={img5} alt="" /></div>
+        <div class="box"><img class="image" src={img2} alt="" /></div>
+        <div class="box"><img class="image" src={img4} alt="" /></div>
+      </div>
+    </span>
+  </div>
+</MainLayout>
+
 
 <style>
-
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
-/* font-family: 'Josefin Sans', sans-serif; */
+  @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+  /* font-family: 'Josefin Sans', sans-serif; */
   body {
-   background-color: rgba(74, 74, 74, 1);
+    background-color: rgba(74, 74, 74, 1);
+    background-repeat: no-repeat;
   }
 
-  .heading{
-    font-family: 'Josefin Sans', sans-serif;
+  .heading {
+    font-family: "Josefin Sans", sans-serif;
     font-size: 60px;
     color: aliceblue;
   }
   .container {
+    /* display: grid; */
     width: 1400px;
     margin: 20px auto;
     columns: 4;
@@ -56,10 +60,10 @@ import Nav from "./components/Nav";
     border-radius: 15px;
   }
 
-  img{
+  .box img {
     transition: box-shadow 0.3s ease;
   }
-  img:hover{
+  .box img:hover {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
     cursor: pointer;
   }
