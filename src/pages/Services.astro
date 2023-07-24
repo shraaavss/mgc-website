@@ -1,0 +1,199 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import gIcon from "./components/images/guitIcon.png";
+import uIcon from "./components/images/ukeIcon.png";
+import pIcon from "./components/images/pianoIcon.png";
+---
+
+<MainLayout>
+  <div class="main-wrapper flex flex-col items-center justify-center">
+    
+    <h1 id="services-list">Services</h1>
+
+    <div
+    class="flex flex-wrap justify-center text-center items-center mb-4 gap-6"
+  >
+    <div class="w-32">
+      <h2 class="text-lg">Students Taught</h2>
+      <p id="students" class="text-4xl font-bold">500</p>
+    </div>
+
+    <div class="w-32">
+      <h2 class="text-lg">Years Spent</h2>
+      <p id="years" class="text-4xl font-bold">12</p>
+    </div>
+
+    <div class="w-32">
+      <h2 class="text-lg">YouTube</h2>
+      <p id="youtube" class="text-4xl font-bold">9K+</p>
+    </div>
+    
+  </div>
+
+    <div class="flex flex-col gap-9">
+      <section
+        class="instruments-shelf flex flex-row w-full justify-evenly flex-wrap gap-6"
+      >
+        <div class="instrument flex flex-row items-center justify-center">
+          <img src={gIcon} alt="" />
+          <h1>Guitar</h1>
+        </div>
+
+        <div class="instrument flex flex-row items-center justify-center">
+          <img src={pIcon} alt="" />
+          <h1>Piano</h1>
+        </div>
+
+        <div class="instrument flex flex-row items-center justify-center">
+          <img src={uIcon} alt="" />
+          <h1>Ukulele</h1>
+        </div>
+      </section>
+
+      <section class="context flex flex-row items-center justify-center">
+        <h1>Timings and Fees for all the instruments are same</h1>
+      </section>
+
+      <section
+        class="time-date flex flex-row w-full justify-evenly flex-wrap gap-6"
+      >
+        <div class="m-w-f time-card">
+          <p>
+            <h1>Mon - Wed - Fri</h1>
+            - 5:00pm <br />
+            - 6:00pm <br />
+            - 7:00pm <br />
+            - 8:00pm
+          </p>
+        </div>
+
+        <div class="t-th-s time-card">
+          <p>
+            <h1>Tue - Thu - Sat</h1>
+            - 5:00pm <br />
+            - 7:00pm (Girls Batch) <br />
+            - 8:00pm
+          </p>
+        </div>
+
+        <div class="morn-b time-card">
+          <p>
+            <h1>Mon - Tue - Wed</h1>
+            - 9:00am
+          </p>
+        </div>
+      </section>
+    </div>
+  </div>
+</MainLayout>
+
+<script>
+    //Increment
+  function incrementCounter(
+    selector: string,
+    current: number,
+    target: number,
+    duration: number,
+    letter: string = ""
+  ) {
+    let counter = document.getElementById(selector);
+    let stepTime = Math.abs(Math.floor(duration / target));
+    if (current < target && counter) {
+      current++;
+      counter.innerText = current.toString() + letter;
+      setTimeout(
+        () => incrementCounter(selector, current, target, duration, letter),
+        stepTime
+      );
+    }
+  }
+  incrementCounter("students", 0, 500, 1000, "+");
+  incrementCounter("years", 0, 12, 1000, "+");
+  incrementCounter("youtube", 0, 9, 1000, "k+");
+</script>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+  /* font-family: 'Josefin Sans', sans-serif; */
+
+  html{
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: linear-gradient(
+      180deg,
+      rgba(74, 74, 74, 1) 20%,
+      rgba(82, 82, 82, 1) 33%,
+      rgba(88, 87, 87, 1) 45%,
+      rgba(97, 95, 95, 1) 54%,
+      rgba(108, 106, 106, 1) 62%,
+      rgba(119, 117, 117, 1) 70%,
+      rgba(139, 137, 137, 1) 77%,
+      rgba(212, 208, 208, 1) 96%
+    );
+    background-repeat: no-repeat;
+  }
+
+  .main-wrapper > h1 {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 60px;
+    color: aliceblue;
+  }
+
+  .instrument {
+    background-color: rgba(74, 74, 74, 0.8);
+    padding: 16px 25px;
+    border-radius: 16px;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .instrument img {
+    height: 100px;
+  }
+
+  .instrument h1 {
+    font-size: 25px;
+    font-family: "Josefin Sans", sans-serif;
+    color: aliceblue;
+  }
+
+  .instrument:hover {
+    box-shadow: 4px 4px 4px rgba(74, 74, 74, 1);
+    cursor: pointer;
+  }
+
+  .context h1{
+    font-size: 25px;
+    font-family: "Josefin Sans", sans-serif;
+    padding: 5px 10px;
+    border: 2px solid black;
+    border-radius: 16px;
+    text-decoration: underline;
+  }
+
+  .time-card {
+    padding: 16px 25px;
+    border-radius: 16px;
+    transition: box-shadow 0.3s ease;
+    max-width: fit-content;
+    background-color: rgba(74, 74, 74, 0.8);
+    color: aliceblue;
+
+
+  }
+
+  .time-card:hover {
+    box-shadow: 4px 4px 4px rgba(74, 74, 74, 1);
+    cursor: pointer;
+  }
+
+  .time-date {
+    font-family: "Josefin Sans", sans-serif;
+  }
+
+  .time-date h1 {
+    font-size: 30px;
+  }
+
+</style>
