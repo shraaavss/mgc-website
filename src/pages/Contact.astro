@@ -1,0 +1,12 @@
+---
+import Nav from "./components/Nav";
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout>
+  <div class="main-wrappper">
+    {(<Nav client:visible position={false} />)}
+      
+  </div>
+
+</MainLayout>
