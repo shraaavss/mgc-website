@@ -7,28 +7,26 @@ import pIcon from "./components/images/pianoIcon.png";
 
 <MainLayout>
   <div class="main-wrapper flex flex-col items-center justify-center">
-    
     <h1 id="services-list">Services</h1>
 
     <div
-    class="flex flex-wrap justify-center text-center items-center mb-4 gap-6"
-  >
-    <div class="w-32">
-      <h2 class="text-lg">Students Taught</h2>
-      <p id="students" class="text-4xl font-bold">500</p>
-    </div>
+      class="flex flex-wrap justify-center text-center items-center mb-4 gap-6"
+    >
+      <div class="w-fit">
+        <h2 class="inc-title">Students Taught</h2>
+        <p id="students" class="text-4xl font-bold">500</p>
+      </div>
 
-    <div class="w-32">
-      <h2 class="text-lg">Years Spent</h2>
-      <p id="years" class="text-4xl font-bold">12</p>
-    </div>
+      <div class="w-fit">
+        <h2 class="inc-title">Years Spent</h2>
+        <p id="years" class="text-4xl font-bold">12</p>
+      </div>
 
-    <div class="w-32">
-      <h2 class="text-lg">YouTube</h2>
-      <p id="youtube" class="text-4xl font-bold">9K+</p>
+      <div class="w-fit">
+        <h2 class="inc-title">YouTube</h2>
+        <p id="youtube" class="text-4xl font-bold">9K+</p>
+      </div>
     </div>
-    
-  </div>
 
     <div class="flex flex-col gap-9">
       <section
@@ -50,8 +48,11 @@ import pIcon from "./components/images/pianoIcon.png";
         </div>
       </section>
 
-      <section class="context flex flex-row items-center justify-center">
-        <h1>Timings and Fees for all the instruments are same</h1>
+      <section
+        class="context flex flex-row items-center justify-center gap-8 p-3"
+      >
+        <h1>Timings are same for all instruments</h1>
+        <a href="/Contact"><button>Contact Now!</button></a>
       </section>
 
       <section
@@ -88,7 +89,7 @@ import pIcon from "./components/images/pianoIcon.png";
 </MainLayout>
 
 <script>
-    //Increment
+  //Increment
   function incrementCounter(
     selector: string,
     current: number,
@@ -116,7 +117,7 @@ import pIcon from "./components/images/pianoIcon.png";
   @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
   /* font-family: 'Josefin Sans', sans-serif; */
 
-  html{
+  html {
     scroll-behavior: smooth;
   }
 
@@ -135,10 +136,18 @@ import pIcon from "./components/images/pianoIcon.png";
     background-repeat: no-repeat;
   }
 
+  .main-wrapper {
+    margin-bottom: 20px;
+  }
   .main-wrapper > h1 {
     font-family: "Josefin Sans", sans-serif;
     font-size: 60px;
     color: aliceblue;
+  }
+
+  .inc-title {
+    font-size: 20px;
+    font-family: "Josefin Sans", sans-serif;
   }
 
   .instrument {
@@ -163,13 +172,30 @@ import pIcon from "./components/images/pianoIcon.png";
     cursor: pointer;
   }
 
-  .context h1{
+  .context h1 {
     font-size: 25px;
     font-family: "Josefin Sans", sans-serif;
     padding: 5px 10px;
     border: 2px solid black;
     border-radius: 16px;
     text-decoration: underline;
+  }
+
+  .context button {
+    padding-inline: 16px;
+    padding-block: 10px;
+    background-color: rgba(35, 35, 35, 1);
+    margin-bottom: 5px;
+    border-radius: 15px;
+    font-family: "Josefin Sans", sans-serif;
+    color: aliceblue;
+    font-size: 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .context button:hover {
+    box-shadow: 3px 3px 2px rgba(82, 82, 82, 1);
   }
 
   .time-card {
@@ -179,8 +205,6 @@ import pIcon from "./components/images/pianoIcon.png";
     max-width: fit-content;
     background-color: rgba(74, 74, 74, 0.8);
     color: aliceblue;
-
-
   }
 
   .time-card:hover {
@@ -195,5 +219,4 @@ import pIcon from "./components/images/pianoIcon.png";
   .time-date h1 {
     font-size: 30px;
   }
-
 </style>
