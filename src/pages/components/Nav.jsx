@@ -79,7 +79,7 @@ export default function Nav({ position = true }) {
                                     <motion.div
                                         className="nav-links-toggle flex flex-col gap-20 items-center justify-center">
                                         <motion.a variants={itemMotion} href="/Contact">Contact</motion.a>
-                                        <motion.a variants={itemMotion} href="./About.astro">About Us</motion.a>
+                                        <motion.a variants={itemMotion} href="./About">About Us</motion.a>
                                         <motion.a variants={itemMotion} href="/Gallery">Gallery</motion.a>
                                     </motion.div>
                                 </motion.div>
