@@ -43,7 +43,7 @@ export default function Nav({ position = true }) {
                             <div className="nav-links-home flex gap-10 text-white">
                                 <a className='nav-link-text' href="/Gallery">Gallery</a>
                                 <a className='nav-link-text' href="/About">About Us</a>
-                                <a className='nav-link-text' href="/Contact">Contact</a>
+                                <a className='nav-link-text' href="/About#contact-us">Contact</a>
                             </div>
                         )}
 
@@ -78,7 +78,7 @@ export default function Nav({ position = true }) {
 
                                     <motion.div
                                         className="nav-links-toggle flex flex-col gap-20 items-center justify-center">
-                                        <motion.a variants={itemMotion} href="/Contact">Contact</motion.a>
+                                        <motion.a variants={itemMotion} href="/About#contact-us">Contact</motion.a>
                                         <motion.a variants={itemMotion} href="./About">About Us</motion.a>
                                         <motion.a variants={itemMotion} href="/Gallery">Gallery</motion.a>
                                     </motion.div>
@@ -105,7 +105,7 @@ export default function Nav({ position = true }) {
                             <div className="nav-links flex gap-10 text-white">
                                 <a className='nav-link-text' href="/Gallery">Gallery</a>
                                 <a className='nav-link-text' href="/About">About Us</a>
-                                <a className='nav-link-text' href="/Contact">Contact</a>
+                                <a className='nav-link-text' href="/About#contact-us">Contact</a>
                             </div>
                         )}
 
@@ -142,7 +142,7 @@ export default function Nav({ position = true }) {
                                         className="nav-links-toggle flex flex-col gap-20 items-center justify-center">
                                         <motion.a variants={itemMotion} href="/About">About Us</motion.a>
                                         <motion.a variants={itemMotion} href="/">Gallery</motion.a>
-                                        <motion.a variants={itemMotion} href="/Contact">Contact</motion.a>
+                                        <motion.a variants={itemMotion} href="/About#contact-us">Contact</motion.a>
                                     </motion.div>
                                 </motion.div>
 
