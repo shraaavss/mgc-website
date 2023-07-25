@@ -1,12 +1,145 @@
 ---
-import Nav from "./components/Nav";
 import MainLayout from "../layouts/MainLayout.astro";
+import wsBtn from "./components/images/WhatsAppButtonGreenLarge.svg";
+import phn from "./components/images/phone.png";
 ---
 
 <MainLayout>
-  <div class="main-wrappper">
-    {(<Nav client:visible position={false} />)}
-      
-  </div>
+  <div>
 
+    <div class="main-wrapper flex flex-col items-center justify-center">
+    <h1 id="contact-us">Contact</h1>
+
+      <section
+        class="contact-details flex flex-row w-full justify-evenly flex-wrap gap-6"
+      >
+        <div class="phone contact-card">
+          <p>
+            <h1>Contact</h1>
+            <div class="flex flex-col gap-5">
+              <a href="tel:+919904191914"
+                ><button class="CTA flex flex-row gap-2"
+                  >Call Now <img class="h-6" src={phn} alt="phone icon" />
+                </button></a
+              >
+              <a
+                aria-label="Chat on WhatsApp"
+                href="https://wa.me/+919904191914"
+              >
+                <img alt="Chat on WhatsApp" src={wsBtn} />
+                <a></a>
+              </a>
+            </div>
+          </p>
+        </div>
+
+        <div class="address contact-card">
+          <p>
+            <h1>Address</h1>
+            <a
+              href="https://www.google.com/maps/dir//MGC+(Mihir+Guitar+Class)/@23.2149611,72.5605574,12z/data=
+          !4m8!4m7!1m0!1m5!1m1!1s0x395c2bceee35e557:0x8e70e7fbab72ade!2m2!1d72.6305978!2d23.2149766?entry=ttu"
+              ><button class="CTA">Get Directions</button></a
+            >
+            <p class="text-lg">
+              Plot No. 285 <br />
+              1, A, “G” Road <br />
+              Sector 5 <br />
+              Gandhinagar, Gujarat 382006 <br />
+              India <br />
+            </p>
+          </p>
+        </div>
+
+        <div class="timing contact-card text-lg">
+          <p>
+            <h1>Business Hours</h1>
+            Mon: 10:00 AM – 9:00 PM <br />
+            Tue: 10:00 AM – 9:00 PM <br />
+            Wed: 10:00 AM – 9:00 PM <br />
+            Thu: 10:00 AM – 9:00 PM <br />
+            Fri: 10:00 AM – 9:00 PM <br />
+            Sat: 10:00 AM – 9:00 PM <br />
+            Sun: Closed
+          </p>
+        </div>
+      </section>
+    </div>
+  </div>
 </MainLayout>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+  /* font-family: 'Josefin Sans', sans-serif; */
+  body {
+    background: linear-gradient(
+      180deg,
+      rgba(74, 74, 74, 1) 20%,
+      rgba(82, 82, 82, 1) 33%,
+      rgba(88, 87, 87, 1) 45%,
+      rgba(97, 95, 95, 1) 54%,
+      rgba(108, 106, 106, 1) 62%,
+      rgba(119, 117, 117, 1) 70%,
+      rgba(139, 137, 137, 1) 77%,
+      rgba(212, 208, 208, 1) 96%
+    );
+    background-repeat: no-repeat;
+    font-family: "Josefin Sans", sans-serif;
+    color: aliceblue;
+  }
+
+  .main-wrapper {
+    margin: 20px;
+  }
+
+  .main-wrapper > h1 {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 60px;
+    color: aliceblue;
+  }
+
+  .contact-card {
+    padding: 16px 25px;
+    border-radius: 16px;
+    transition: box-shadow 0.3s ease;
+    max-width: fit-content;
+    background-color: rgba(74, 74, 74, 0.8);
+    color: aliceblue;
+  }
+
+  .contact-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .contact-card:hover {
+    box-shadow: 4px 4px 4px rgba(74, 74, 74, 1);
+    cursor: pointer;
+  }
+
+  .contact-card h1 {
+    font-size: 30px;
+    font-family: "Josefin Sans", sans-serif;
+    color: aliceblue;
+    font-weight: bold;
+  }
+
+  .CTA {
+    padding-inline: 10px;
+    padding-block: 8px;
+    background-color: rgba(35, 35, 35, 1);
+    margin-bottom: 5px;
+    border-radius: 15px;
+    font-family: "Josefin Sans", sans-serif;
+    color: aliceblue;
+    font-size: 18px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .CTA:hover {
+    box-shadow: 3px 3px 2px rgba(82, 82, 82, 1);
+  }
+</style>
