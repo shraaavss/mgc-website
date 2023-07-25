@@ -10,10 +10,13 @@ import Nav from "./components/Nav.jsx";
     <div class="dark-overlay">
       <div class="hero flex items-center justify-center">
         <img class="logo" src={mgclogo} alt="" />
-        <h1 class="tagline">Mihir Guitar Classes</h1>
+        <div>
+          <h1 class="tagline">Mihir Guitar Classes</h1>
+          <p class="sub-tag">Music teacher for <a class="spc-hover" href="/About#services-list">Guitar, Piano, and Ukulele</a></p>
+        </div>
       </div>
 
-      <a href="/About"><button class="CTA">Know More</button></a>
+      <a href="/About#services-list"><button class="CTA">Know More</button></a>
     </div>
   </div>
 </div>
@@ -25,9 +28,9 @@ import Nav from "./components/Nav.jsx";
   @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
   /* font-family: 'Josefin Sans', sans-serif; */
 
-  body {
+  /* body {
     overflow: hidden;
-  }
+  } */
 
   .main-wrap {
     background-image: url("./components/images/guitars.png");
@@ -43,10 +46,21 @@ import Nav from "./components/Nav.jsx";
     text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
     text-align: center;
     color: aliceblue;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .sub-tag {
+    margin: 0px;
+    padding: 0px;
+    color: aliceblue;
+    font-size: 35px;
+    font-family: "Josefin Sans", sans-serif;
+    text-align: center;
   }
 
   .logo {
-    height: 300px;
+    height: 280px;
   }
 
   #intro {
@@ -84,6 +98,10 @@ import Nav from "./components/Nav.jsx";
     box-shadow: 3px 3px 2px rgba(82, 82, 82, 1);
   }
 
+  .spc-hover:hover{
+    text-shadow: 0px 0px 4px rgb(243, 243, 243);
+  }
+
   /* MEDIA QUERIES */
 
   @media screen and (max-width: 767px) {
@@ -94,6 +112,10 @@ import Nav from "./components/Nav.jsx";
 
     .tagline {
       font-size: 50px;
+    }
+
+    .sub-tag{
+      font-size: 25px;
     }
 
     .logo {
