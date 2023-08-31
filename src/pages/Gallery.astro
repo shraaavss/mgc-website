@@ -6,13 +6,14 @@ import img4 from "./components/images/img4.png";
 import img5 from "./components/images/img5.jpg";
 import Nav from "./components/Nav";
 import MainLayout from "../layouts/MainLayout.astro";
+import ReactGallery from "./components/ReactGallery";
 ---
 
 <MainLayout>
   <div>
     {(<Nav client:visible position={false} />)}
 
-    <span class="flex flex-col justify-center items-center mt-10 mb-10">
+    <!-- <span class="flex flex-col justify-center items-center mt-10 mb-10">
       <h1 class="heading">Our Gallery</h1>
 
       <div class="container">
@@ -22,7 +23,9 @@ import MainLayout from "../layouts/MainLayout.astro";
         <div class="box"><img class="image" src={img2} alt="" /></div>
         <div class="box"><img class="image" src={img4} alt="" /></div>
       </div>
-    </span>
+    </span> -->
+
+    <ReactGallery />
 
   </div>
 </MainLayout>
@@ -36,55 +39,4 @@ import MainLayout from "../layouts/MainLayout.astro";
     background-repeat: no-repeat;
   }
 
-  .heading {
-    font-family: "Josefin Sans", sans-serif;
-    font-size: 60px;
-    color: aliceblue;
-  }
-  .container {
-    /* display: grid; */
-    width: 1400px;
-    margin: 20px auto;
-    columns: 4;
-    column-gap: 20px;
-    padding-inline: 20px;
-  }
-
-  .container .box {
-    width: 100%;
-    margin-bottom: 10px;
-    break-inside: avoid;
-  }
-
-  .container .box img {
-    max-width: 100%;
-    border-radius: 15px;
-  }
-
-  .box img {
-    transition: box-shadow 0.3s ease;
-  }
-  .box img:hover {
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
-    cursor: pointer;
-  }
-
-  @media (max-width: 1200px;) {
-    .container {
-      width: calc(100% - 40%);
-      columns: 3;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .container {
-      columns: 2;
-    }
-
-    @media (max-width: 480 px) {
-      .container {
-        columns: 1;
-      }
-    }
-  }
 </style>
